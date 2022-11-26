@@ -1,8 +1,7 @@
 /** @format */
-
-import logo from "./logo.svg";
 import "./App.css";
 import AddUser from "./components/addUser";
+import UsersList from "./components/usersList";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -10,8 +9,9 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' exact element={<h1>Hello User</h1>} />
-          <Route path='addUser' element={<AddUser />} />
+          <Route path="/" element={<UsersList />} />
+          <Route path="addUser" element={<AddUser />} />
+          <Route path="edit/:id" element={<AddUser />} />
         </Routes>
       </BrowserRouter>
     </>
